@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Sowmya Madapura Nagarajamurthy - Portfolio</title>
+  <meta content="Portfolio for Sowmya Madapura Nagarajamurthy, a Software Developer and Full Stack Engineer."
+    name="description">
+  <meta content="portfolio, resume, software developer, full stack engineer" name="keywords">
+
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+
+  <link href="assets/css/main.css" rel="stylesheet">
+
+ <style>
+    html, body {
+      overflow-x: hidden;
+    }
+    html {
+      font-size: 18px;
+      font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+      color: #232323;
+      background: #fff;
+    }
+    body {
+      line-height: 1.7;
+      font-weight: 400;
+      letter-spacing: 0.01em;
+      background: #fff;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Raleway', 'Segoe UI', Arial, sans-serif;
+      font-weight: 700;
+      color: #181818;
+      letter-spacing: 0.01em;
+      line-height: 1.2;
+      margin-bottom: 0.7em;
+    }
+    h2.section-title, .section-title h2 {
+      font-size: 2.2rem;
+      margin-bottom: 0.3em;
+    }
+    .section-title p {
+      font-size: 1.15rem;
+      color: #444;
+      margin-bottom: 1.5em;
+    }
+    p, ul, ol {
+      font-size: 1.08rem;
+      color: #232323;
+      margin-bottom: 1.1em;
+    }
+    ul, ol {
+      padding-left: 1.2em;
+    }
+    .about-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 0.2rem;
+      color: #222;
+    }
+    .about-subtitle {
+      font-size: 1.1rem;
+      color: #555;
+      margin-bottom: 1rem;
+      font-weight: 500;
+    }
+    .about-intro {
+      font-size: 1.08rem;
+      color: #333;
+      margin-bottom: 1.2rem;
+    }
+    .about-list li div {
+      font-size: 1.05rem;
+      color: #232323;
+    }
+    .resume-item ul li, .about-list li {
+      margin-bottom: 0.7em;
+      font-size: 1.05rem;
+    }
+    .resume-item h4 {
+      font-size: 1.15rem;
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+    .resume-item h5 {
+      font-size: 1rem;
+      color: #666;
+      font-weight: 500;
+    }
+    .resume-item p, .resume-item ul li {
+      color: #2a2a2a;
+    }
+    .service-item h3 {
+      font-size: 1.18rem;
+      font-weight: 600;
+      color: #232323;
+    }
+    .service-item p {
+      font-size: 1.05rem;
+      color: #444;
+    }
+    .contact .info-item h3 {
+      font-size: 1.1rem;
+      color: #232323;
+      font-weight: 600;
+    }
+    .contact .info-item p {
+      font-size: 1.05rem;
+      color: #444;
+    }
+    .btn, .btn-primary, .btn-secondary {
+      font-size: 1.05rem;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+    }
+    /* Fix for About Section List Alignment - Ensures proper alignment of list items with icons */
+    .about .content ul li {
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .about .content ul li i {
+      margin-right: 8px;
+      margin-top: 3px;
+      flex-shrink: 0;
+    }
+
+    /* Animation for Tech Stack Section */
+    .tech-stack-item {
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .tech-stack-item:hover {
+      transform: translateY(-8px);
+    }
+
+    .tech-stack-item .icon {
+      display: inline-block;
+      transition: box-shadow 0.3s ease-in-out;
+      border-radius: 50%;
+      padding: 5px;
+    }
+
+    .tech-stack-item:hover .icon {
+      box-shadow: 0 0 25px rgba(var(--icon-color-rgb), 0.35);
+    }
+
+    .tech-stack-item p {
+      transition: font-weight 0.3s ease-in-out;
+      margin-top: 5px;
+    }
+
+    .tech-stack-item:hover p {
+      font-weight: 600;
+    }
+
+    /* Hero Section Fix: Make it fit the screen */
+    #hero {
+      width: 100vw;
+      min-height: 100vh;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+    }
+
+    #hero img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      object-fit: cover;
+      z-index: 1;
+    }
+
+    #hero .container {
+      position: relative;
+      z-index: 3;
+    }
+
+    #particles-js {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      z-index: 2;
+    }
+
+    /* Blurred border effect for about section image */
+    .about-profile-blur-wrapper {
+      position: relative;
+      display: inline-block;
+      border-radius: 16px;
+      overflow: visible;
+    }
+    .about-profile-blur-wrapper::before {
+      content: '';
+      position: absolute;
+      top: -10px; left: -10px; right: -10px; bottom: -10px;
+      z-index: 1;
+      border-radius: 20px;
+      filter: blur(12px);
+      background: url('assets/img/IMG_7740.JPG') center/cover no-repeat;
+      opacity: 0.7;
+    }
+    .about-profile-blur-img {
+      position: relative;
+      z-index: 2;
+      display: block;
+      width: 60vw;
+      height: 50vh;
+      object-fit: cover;
+      border-radius: 16px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.10);
+    }
+  </style>
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex flex-column justify-content-center">
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
+        <li><a href="#about"><i class="bi bi-person navicon"></i><span>About</span></a></li>
+        <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i><span>Resume</span></a></li>
+        <li><a href="#projects"><i class="bi bi-images navicon"></i><span>Projects</span></a></li>
+        <li><a href="#contact"><i class="bi bi-envelope navicon"></i><span>Contact</span></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main">
+
+    <section id="hero" class="hero section light-background d-flex flex-column justify-content-center">
+      <img src="assets/img/hero_bg.jpg" alt="Background Image">
+      <div id="particles-js"></div>
+      <div class="container" data-aos="zoom-in" data-aos-delay="100">
+        <h1>Sowmya Madapura Nagarajamurthy</h1>
+        <p><span class="typed" data-typed-items="Software Developer, Full Stack Engineer, Backend Engineer"></span><span
+            class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+        <div class="social-links">
+          <!-- <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a> -->
+          <!-- <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a> -->
+          <!-- <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a> -->
+          <a href="https://www.linkedin.com/in/sowmya-mn/" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        </div>
+        <div class="mt-4">
+          <a href="https://drive.google.com/file/d/1c_5-X0LteBKnVo3qFzr8MYvTbGK6HF6x/view?usp=sharing"
+            class="btn btn-primary me-2">Download Resume</a>
+          <a href="https://github.com/SowmyaMNagarajamurthy" class="btn btn-secondary">Visit Github</a>
+        </div>
+      </div>
+    </section>
+    <section id="about" class="about section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>About</h2>
+        <p>Versatile • Performance-driven • Collaborative</p>
+      </div>
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-4 justify-content-center align-items-center">
+          <div class="col-lg-4" data-aos="fade-right" data-aos-delay="200">
+            <div class="about-profile-blur-wrapper">
+              <img src="assets/img/IMG_7740.JPG" class="about-profile-blur-img img-fluid" alt="Profile image of Sowmya Madapura Nagarajamurthy">
+            </div>
+          </div>
+          <div class="col-lg-8 content" data-aos="fade-left" data-aos-delay="300">
+            <h2>Software Engineer & Data Analyst</h2>
+            <p class="fst-italic py-3">
+              I'm a recent MSc Data Analytics graduate passionate about translating complex data into meaningful
+              insights. My academic and professional journey has strengthened my analytical thinking and technical
+              skills in software development and data analysis.
+            </p>
+            <ul>
+              <li>
+                <i class="bi bi-chevron-right"></i>
+                <div><strong>Experience:</strong> Gained practical experience using tools like SQL, Python, Java,
+                  Tableau, and Power BI for data cleaning, exploratory data analysis, and predictive modeling.</div>
+              </li>
+              <li>
+                <i class="bi bi-chevron-right"></i>
+                <div><strong>Diverse Projects:</strong> My projects spanned domains including sales, healthcare, and
+                  customer behavior, allowing me to build strong foundations in statistical techniques and data
+                  visualization.</div>
+              </li>
+              <li>
+                <i class="bi bi-chevron-right"></i>
+                <div><strong>Career Goal:</strong> I am actively seeking an entry-level data analyst or software
+                  developer opportunity. I bring a curious mindset, a problem-solving attitude, and a readiness to learn
+                  fast, contribute meaningfully, and grow within a forward-thinking, data-driven team.</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="tech-stack" class="skills section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Tech Stack</h2>
+        <p>A selection of the primary tools and technologies I work with.</p>
+      </div>
+      <div class="container">
+        <div class="row text-center gy-4">
+          <div class="col-lg-2 col-md-3 col-4 tech-stack-item" data-aos="fade-up" data-aos-delay="100">
+            <i class="devicon-javascript-plain icon"
+              style="font-size: 48px; color: #f7df1e; --icon-color-rgb: 247, 223, 30;"></i>
+            <p>JavaScript</p>
+          </div>
+          <div class="col-lg-2 col-md-3 col-4 tech-stack-item" data-aos="fade-up" data-aos-delay="150">
+            <i class="devicon-python-plain icon"
+              style="font-size: 48px; color: #3776ab; --icon-color-rgb: 55, 118, 171;"></i>
+            <p>Python</p>
+          </div>
+          <div class="col-lg-2 col-md-3 col-4 tech-stack-item" data-aos="fade-up" data-aos-delay="200">
+            <i class="devicon-java-plain icon"
+              style="font-size: 48px; color: #007396; --icon-color-rgb: 0, 115, 150;"></i>
+            <p>Java</p>
+          </div>
+          <div class="col-lg-2 col-md-3 col-4 tech-stack-item" data-aos="fade-up" data-aos-delay="250">
+            <i class="devicon-react-original icon"
+              style="font-size: 48px; color: #61dafb; --icon-color-rgb: 97, 218, 251;"></i>
+            <p>React</p>
+          </div>
+          <div class="col-lg-2 col-md-3 col-4 tech-stack-item" data-aos="fade-up" data-aos-delay="300">
+            <i class="devicon-nodejs-plain icon"
+              style="font-size: 48px; color: #339933; --icon-color-rgb: 51, 153, 51;"></i>
+            <p>Node.js</p>
+          </div>
+          <div class="col-lg-2 col-md-3 col-4 tech-stack-item" data-aos="fade-up" data-aos-delay="350">
+            <i class="devicon-mongodb-plain icon"
+              style="font-size: 48px; color: #47a248; --icon-color-rgb: 71, 162, 72;"></i>
+            <p>MongoDB</p>
+          </div>
+          <div class="col-lg-2 col-md-3 col-4 tech-stack-item" data-aos="fade-up" data-aos-delay="400">
+            <i class="devicon-postgresql-plain icon"
+              style="font-size: 48px; color: #336791; --icon-color-rgb: 51, 103, 145;"></i>
+            <p>PostgreSQL</p>
+          </div>
+          <div class="col-lg-2 col-md-3 col-4 tech-stack-item" data-aos="fade-up" data-aos-delay="450">
+            <i class="devicon-html5-plain icon"
+              style="font-size: 48px; color: #e34f26; --icon-color-rgb: 227, 79, 38;"></i>
+            <p>HTML5</p>
+          </div>
+          <div class="col-lg-2 col-md-3 col-4 tech-stack-item" data-aos="fade-up" data-aos-delay="500">
+            <i class="devicon-css3-plain icon"
+              style="font-size: 48px; color: #1572b6; --icon-color-rgb: 21, 114, 182;"></i>
+            <p>CSS3</p>
+          </div>
+          <div class="col-lg-2 col-md-3 col-4 tech-stack-item" data-aos="fade-up" data-aos-delay="550">
+            <i class="devicon-git-plain icon"
+              style="font-size: 48px; color: #f05032; --icon-color-rgb: 240, 80, 50;"></i>
+            <p>Git</p>
+          </div>
+          <div class="col-lg-2 col-md-3 col-4 tech-stack-item" data-aos="fade-up" data-aos-delay="600">
+            <i class="devicon-docker-plain icon"
+              style="font-size: 48px; color: #2496ed; --icon-color-rgb: 36, 150, 237;"></i>
+            <p>Docker</p>
+          </div>
+          <div class="col-lg-2 col-md-3 col-4 tech-stack-item" data-aos="fade-up" data-aos-delay="650">
+            <i class="devicon-github-original icon"
+              style="font-size: 48px; color: #181717; --icon-color-rgb: 24, 23, 23;"></i>
+            <p>GitHub</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="skills" class="skills section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Skills</h2>
+        <p>Key technical skills and methodologies I have experience with.</p>
+      </div>
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row skills-content skills-animation">
+          <div class="col-lg-6">
+            <div class="progress">
+              <span class="skill"><span>Agile Methodologies</span> <i class="val">Proficient</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0"
+                  aria-valuemax="100"></div>
+              </div>
+            </div>
+            <div class="progress">
+              <span class="skill"><span>JavaScript/Python/Java</span> <i class="val">Advanced</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0"
+                  aria-valuemax="100"></div>
+              </div>
+            </div>
+            <div class="progress">
+              <span class="skill"><span>SQL</span> <i class="val">Intermediate</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0"
+                  aria-valuemax="100"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="progress">
+              <span class="skill"><span>MongoDB/PostgreSQL</span> <i class="val">Intermediate</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0"
+                  aria-valuemax="100"></div>
+              </div>
+            </div>
+            <div class="progress">
+              <span class="skill"><span>GitHub</span> <i class="val">Advanced</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0"
+                  aria-valuemax="100"></div>
+              </div>
+            </div>
+            <div class="progress">
+              <span class="skill"><span>Software Debugging</span> <i class="val">Intermediate</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0"
+                  aria-valuemax="100"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="resume" class="resume section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Resume</h2>
+        <p>Versatile Software Developer with around 2 years of professional experience building high-performance systems
+          and full-stack web applications. Skilled in Javascript, React, Node.js, and MongoDB, with a strong focus on
+          performance optimization and user-centric design.</p>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="resume-title">Summary</h3>
+            <div class="resume-item pb-0">
+              <h4>Sowmya Madapura Nagarajamurthy</h4>
+              <ul>
+                <li>Dublin, Ireland</li>
+                <li>(353) 899587821</li>
+                <li>sowmya.nagarajamurthy@gmail.com</li>
+              </ul>
+            </div>
+            <h3 class="resume-title">Education</h3>
+            <div class="resume-item">
+              <h4>MS in Data Analytics</h4>
+              <h5>Jan 2024 - Jan 2025</h5>
+              <p><em>Dublin Business School, Ireland</em></p>
+              <p>Coursework: Python programming, Statistics, Data and Network Mining Fundamentals, Data warehousing.</p>
+            </div>
+            <div class="resume-item">
+              <h4>BE in Computer Science Engineering</h4>
+              <h5>2019 - 2023</h5>
+              <p><em>Visvesvaraya Technological University, India</em></p>
+              <p>Coursework: Operating Systems, Database Management, Computer Architecture, Java, Data Structures and
+                Algorithms.</p>
+            </div>
+          </div>
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="resume-title">Professional Experience</h3>
+            <div class="resume-item">
+              <h4>Software Developer</h4>
+              <h5>Jan 2023 - Dec 2023</h5>
+              <p><em>Honeywell, Bengaluru, India</em></p>
+              <ul>
+                <li>Designed and implemented the Trace Master Tool for aircraft systems, enabling automated traceability
+                  report generation between flight deck systems.</li>
+                <li>Refactored legacy Java codebase, closing 60% of function gaps and improving runtime performance by
+                  25% through logic streamlining.</li>
+                <li>Optimized report generation logic, cutting processing time by 10 sec, significantly improving
+                  efficiency for downstream engineering teams.</li>
+                <li>Improved maintainability and scalability of the NetBeans-based tool, reducing future debugging
+                  effort by 30% and enhancing modularity.</li>
+              </ul>
+            </div>
+            <div class="resume-item">
+              <h4>Software Developer Intern</h4>
+              <h5>Jun 2022 - Dec 2022</h5>
+              <p><em>AIdeas Pvt. Ltd., Bengaluru, India</em></p>
+              <ul>
+                <li>Developed a full-stack e-commerce platform using React, Node.js, and MongoDB, simulating real-world
+                  workflows.</li>
+                <li>Achieved a 5-6% improvement in overall code reliability and maintainability.</li>
+                <li>Developed a price comparison algorithm that reduced shipping expenses by 20%, optimising logistics
+                  operations.</li>
+                <li>Implemented new features boosting engagement and user accessibility by 35%.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="projects" class="services section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Projects</h2>
+        <p>A selection of projects I've worked on.</p>
+      </div>
+      <div class="container">
+        <div class="row gy-4 justify-content-center gx-5">
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item item-cyan position-relative">
+              <div class="icon"><i class="bi bi-headset"></i></div>
+              <a href="#" class="stretched-link">
+                <h3>Customer Support Optimization</h3>
+              </a>
+              <p>Built a Customer Support Optimization solution for e-commerce by developing and automating ETL
+                processes with SSIS, consolidating data into a central warehouse.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item item-orange position-relative">
+              <div class="icon"><i class="bi bi-youtube"></i></div>
+              <a href="#" class="stretched-link">
+                <h3>YouTube Transcript Summarizer</h3>
+              </a>
+              <p>Built a full-stack YouTube Transcript Summarizer using React, FastAPI, and OpenAI API, reducing content
+                review time by 70% with auto-generated summaries.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="contact section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+        <p>Feel free to reach out. I'm open to discussing new opportunities.</p>
+      </div>
+      <div class="container" data-aos="fade" data-aos-delay="100">
+        <div class="row gy-4">
+          <div class="col-lg-4">
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+              <i class="bi bi-geo-alt flex-shrink-0"></i>
+              <div>
+                <h3>Location</h3>
+                <p>Dublin, Ireland</p>
+              </div>
+            </div>
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+              <i class="bi bi-envelope flex-shrink-0"></i>
+              <div>
+                <h3>Email</h3>
+                <p>sowmya.nagarajamurthy@gmail.com</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-8 d-flex align-items-center justify-content-center">
+            <div data-aos="fade-up" data-aos-delay="200">
+              <a href="mailto:sowmya.nagarajamurthy@gmail.com?subject=Contact from your Portfolio"
+                class="btn btn-primary">Send me an Email</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer" class="footer position-relative light-background">
+    <div class="container">
+      <h3 class="sitename">Sowmya Madapura Nagarajamurthy</h3>
+      <p>Passionate software developer creating impactful solutions.</p>
+      <div class="social-links d-flex justify-content-center">
+        <!-- <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a> -->
+        <!-- <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a> -->
+        <!-- <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a> -->
+        <a href="https://www.linkedin.com/in/sowmya-mn/" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+      </div>
+
+    </div>
+    </div>
+  </footer>
+
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <script src="assets/js/main.js"></script>
+  <script type="text/javascript" src="particles.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+
+</body>
+
+</html>
